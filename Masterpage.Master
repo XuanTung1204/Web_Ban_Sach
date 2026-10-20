@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Masterpage.Master.cs" Inherits="SieuThiSach.Site1" %>
+
+<%@ Register Src="~/UserControls/Header.ascx"        TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/UserControls/Menu.ascx"          TagPrefix="uc" TagName="Menu" %>
+<%@ Register Src="~/UserControls/Chudesach.ascx"     TagPrefix="uc" TagName="Chudesach" %>
+<%@ Register Src="~/UserControls/Nhaxuatban.ascx"    TagPrefix="uc" TagName="Nhaxuatban" %>
+<%@ Register Src="~/UserControls/Quangcao1.ascx"     TagPrefix="uc" TagName="Quangcao1" %>
+<%@ Register Src="~/UserControls/Sachbannhieu.ascx"  TagPrefix="uc" TagName="Sachbannhieu" %>
+<%@ Register Src="~/UserControls/Giohang.ascx"       TagPrefix="uc" TagName="Giohang" %>
+<%@ Register Src="~/UserControls/Quangcao.ascx"      TagPrefix="uc" TagName="Quangcao" %>
+<%@ Register Src="~/UserControls/Footer.ascx"        TagPrefix="uc" TagName="Footer" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Book Online - Siêu thị sách</title>
+    <link href="~/Styles/site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+
+            <div id="header">S<uc:Header ID="Header1" runat="server" /></div>
+            <div id="menu"><uc:Menu ID="Menu1" runat="server" /></div>
+
+            <div id="main">
+                <!-- Trai -->
+                <div id="left">
+                    <uc:Chudesach ID="Chudesach1" runat="server" />
+                    <uc:Nhaxuatban ID="Nhaxuatban1" runat="server" />
+                </div>
+
+                <!-- Giua -->
+                <div id="center">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <uc:Quangcao1 ID="Quangcao11" runat="server" />
+                    <uc:Sachbannhieu ID="Sachbannhieu1" runat="server" />
+                </div>
+
+                <!-- Phai -->
+                <div id="right">
+                    <uc:Giohang ID="Giohang1" runat="server" />
+                    <uc:Quangcao ID="Quangcao2" runat="server" />
+                </div>
+            </div>
+
+            <div id="footer"><uc:Footer ID="Footer1" runat="server" /></div>
+
+        </div>
+    </form>
+</body>
+</html>

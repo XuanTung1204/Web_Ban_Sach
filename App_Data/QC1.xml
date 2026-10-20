@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+	<Ad>
+		<ImageUrl>~/Images/QC01.png</ImageUrl>
+		<NavigateUrl>http://www.damsenpark.com.vn</NavigateUrl>
+		<AlternateText>damsenpark</AlternateText>
+		<Keyword>Giải trí</Keyword>
+		<Impressions>40</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/QC02.png</ImageUrl>
+		<NavigateUrl>http://www.axMobile.com</NavigateUrl>
+		<AlternateText>axMobile</AlternateText>
+		<Keyword>Kỹ thuật cao</Keyword>
+		<Impressions>30</Impressions>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Images/QC03.png</ImageUrl>
+		<NavigateUrl>http://www.vinafone.com.vn</NavigateUrl>
+		<AlternateText>vinafone</AlternateText>
+		<Keyword>Điện thoại</Keyword>
+		<Impressions>30</Impressions>
+	</Ad>
+</Advertisements>
