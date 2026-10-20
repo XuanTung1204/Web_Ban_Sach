@@ -1,9 +1,4 @@
-/* =====================================================================
-   Book Online - Siêu thị sách  |  site.css (phiên bản giao diện đẹp hơn)
-   - Giữ nguyên TOÀN BỘ tên class/id của bản cũ -> chép đè là chạy, không
-     cần sửa file .aspx / .ascx nào.
-   - Muốn đổi màu cả trang: chỉ sửa các biến trong khối :root bên dưới.
-   ===================================================================== */
+
 
 :root {
     /* Bảng màu xanh lá */
@@ -33,7 +28,11 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html, body { margin: 0; padding: 0; }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
@@ -43,21 +42,30 @@ body {
     background: var(--page-bg);
 }
 
-form { margin: 0; }
+form {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 img  { border: 0; }
 a    { color: var(--link); text-decoration: none; transition: color .15s, background-color .15s; }
 a:hover { text-decoration: underline; }
 
-/* ---------- Khung trang ---------- */
+/* Khung trang */
 #wrapper {
     width: 920px;
     margin: 0 auto;
     background: #fff;
     box-shadow: 0 0 18px rgba(0, 0, 0, .12);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    flex: 1;
 }
 
 #main {
+    flex: 1;
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -67,11 +75,12 @@ a:hover { text-decoration: underline; }
 #center { flex: 1 1 auto; min-width: 0; }
 #right  { flex: 0 0 170px; display: flex; flex-direction: column; gap: 10px; }
 
-/* ---------- Header (banner) ---------- */
+/* Header */
 .header {
     display: flex;
     align-items: center;
-    height:  #a8dcc0 100%);
+    background: #a8dcc0;
+    height: 100%;
     overflow: hidden;
 }
 .header .logo   { flex: 0 0 230px; display: block; }
@@ -79,11 +88,7 @@ a:hover { text-decoration: underline; }
 .header .banner { flex: 1 1 auto; min-width: 0; }
 .header .banner img { display: block; width: 100%; height: 170px; object-fit: cover; }
 
-/* ---------- Menu ngang ---------- */
-#menu {
-    ba0px; object-fit: cover; }
-
-/* ---------- Menu ngang ---------- */
+/* Menu ngang */
 #menu {
     background: linear-gradient(to bottom, var(--g-600), var(--g-800));
     box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
@@ -110,7 +115,7 @@ a:hover { text-decoration: underline; }
     text-decoration: none;
 }
 
-/* ---------- Cột trái: Chủ đề sách / Nhà xuất bản ---------- */
+/* Cột trái: Chủ đề sách / Nhà xuất bản */
 .box-list {
     background: #fff;
     border: 1px solid var(--line);
@@ -162,7 +167,7 @@ a:hover { text-decoration: underline; }
     text-decoration: none;
 }
 
-/* ---------- Tiêu đề từng khu ở giữa ---------- */
+/* Tiêu đề từng khu ở giữa */
 .sec-title {
     margin: 0 0 8px;
     padding: 0 0 6px;
@@ -184,7 +189,7 @@ a:hover { text-decoration: underline; }
     border-bottom: 2px solid var(--g-200);
 }
 
-/* ---------- Lưới sách (2 cột): Sách mới / Theo chủ đề / Theo NXB ---------- */
+/* Lưới sách (2 cột): Sách mới / Theo chủ đề / Theo NXB */
 .book-grid { display: block; width: 100%; border: 0; border-collapse: collapse; }
 .book-grid tbody { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0; }
 .book-grid tr    { display: flex; }
@@ -246,12 +251,12 @@ a:hover { text-decoration: underline; }
 }
 .empty-text { padding: 20px; text-align: center; color: var(--muted); font-style: italic; }
 
-/* ---------- Banner quảng cáo ngang (AdRotator) ---------- */
+/* Banner quảng cáo ngang */
 .ad-banner { margin: 12px 0; text-align: center; }
 .ad-banner a, .ad-banner img { display: block; width: 100%; }
 .ad-banner img { border-radius: var(--radius); box-shadow: var(--shadow); }
 
-/* ---------- Sách bán chạy ---------- */
+/* Sách bán chạy */
 .box-hot {
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -289,7 +294,7 @@ a:hover { text-decoration: underline; }
 .hot-item a { font-size: 12.5px; font-style: italic; color: var(--link); }
 .hot-item:hover { background: #fff7f0; }
 
-/* ---------- Cột phải: Giỏ hàng + Quảng cáo ---------- */
+/* Cột phải: Giỏ hàng / Quảng cáo */
 .cart-box {
     background: var(--cart-bg);
     border: 1px solid #e6d98a;
@@ -328,7 +333,7 @@ a:hover { text-decoration: underline; }
 .ad-grid img { box-shadow: var(--shadow); transition: opacity .15s; }
 .ad-grid a:hover img { opacity: .9; }
 
-/* ---------- Chân trang ---------- */
+/* Footer */
 #footer { margin-top: 4px; }
 .footer {
     background: linear-gradient(to bottom, var(--g-800), var(--g-900));
@@ -339,7 +344,7 @@ a:hover { text-decoration: underline; }
     padding: 14px 10px;
 }
 
-/* ---------- Chi tiết sách ---------- */
+/* Chi tiết sách */
 .detail {
     background: #fffdf1;
     border: 1px solid #e6dcae;
@@ -394,7 +399,7 @@ a:hover { text-decoration: underline; }
 }
 .detail-buy b { color: var(--red); font-size: 16px; }
 
-/* ---------- Biểu mẫu: Đăng nhập / Đăng ký / Đổi mật khẩu ---------- */
+/* Biểu mẫu: Đăng nhập / Đăng ký / Đổi mật khẩu */
 .form-page {
     padding: 18px 20px 22px;
     background: #fff;
@@ -500,7 +505,7 @@ a:hover { text-decoration: underline; }
     color: var(--g-900);
 }
 
-/* ---------- Giỏ hàng (trang Giohang.aspx) ---------- */
+/* Giỏ hàng */
 .cart-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 6px 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .cart-table th {
     background: linear-gradient(to bottom, #a2681b, var(--brown));
@@ -522,7 +527,7 @@ a:hover { text-decoration: underline; }
 .cart-actions { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 4px; }
 .text-block { padding: 12px 16px; line-height: 1.7; font-size: 13px; }
 
-/* ---------- Màn hình nhỏ (điện thoại / cửa sổ hẹp) ---------- */
+/* Màn hình nhỏ (điện thoại) */
 @media (max-width: 960px) {
     #wrapper { width: 100%; box-shadow: none; }
     #main { flex-direction: column; }

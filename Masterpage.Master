@@ -22,7 +22,7 @@
     <form id="form1" runat="server">
         <div id="wrapper">
 
-            <div id="header">S<uc:Header ID="Header1" runat="server" /></div>
+            <div id="header"><uc:Header ID="Header1" runat="server" /></div>
             <div id="menu"><uc:Menu ID="Menu1" runat="server" /></div>
 
             <div id="main">
