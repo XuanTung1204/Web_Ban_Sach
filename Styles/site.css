@@ -29,7 +29,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body {
-    height: 100%;
+/*    height: 100%;*/
     margin: 0;
     padding: 0;
 }
@@ -44,7 +44,7 @@ body {
 
 form {
     margin: 0;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -60,12 +60,12 @@ a:hover { text-decoration: underline; }
     box-shadow: 0 0 18px rgba(0, 0, 0, .12);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    flex: 1;
+/*    min-height: 100vh;*/
+    flex: 1 0 auto;
 }
 
 #main {
-    flex: 1;
+    flex: 1 0 auto;
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -101,7 +101,7 @@ a:hover { text-decoration: underline; }
     text-align: right;
 }
 .menu li { display: inline-block; padding: 0; }
-.menu a, .menu span {
+.menu li > a, .menu li > span {
     display: inline-block;
     padding: 8px 14px;
     color: #fff;
@@ -543,4 +543,64 @@ a:hover { text-decoration: underline; }
     .frow > label, .frow > .flabel { flex-basis: 100%; text-align: left; padding: 0 0 3px; }
     .frow-btn, .frow-link { padding-left: 0; }
     .header .banner { display: none; }
+}
+
+.poll-box {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #fff;
+}
+
+    .poll-box h3 {
+        margin: 0;
+        padding: 7px 0;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        background: linear-gradient(to bottom, var(--g-600), var(--g-700));
+    }
+
+/*Tham do*/
+.poll-body {
+    padding: 8px 10px;
+}
+
+.poll-q {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--g-900);
+}
+
+.poll-list {
+    display: block;
+    font-size: 12px;
+}
+
+.poll-item {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.poll-bar {
+    height: 8px;
+    background: #e6efe8;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 2px 0;
+}
+.poll-bar div {
+    height: 100%;
+    background: var(--g-500);
+}
+
+.poll-item small {
+    color: var(--muted);
+}
+
+.frow input[readonly] {
+    background: #eef2ef;
+    color: #555;
 }

@@ -9,6 +9,7 @@
 <%@ Register Src="~/UserControls/Giohang.ascx"       TagPrefix="uc" TagName="Giohang" %>
 <%@ Register Src="~/UserControls/Quangcao.ascx"      TagPrefix="uc" TagName="Quangcao" %>
 <%@ Register Src="~/UserControls/Footer.ascx"        TagPrefix="uc" TagName="Footer" %>
+<%@ Register Src="~/UserControls/Thamdo.ascx"        TagPrefix="uc" TagName="Thamdo" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -44,6 +45,7 @@
                 <div id="right">
                     <uc:Giohang ID="Giohang1" runat="server" />
                     <uc:Quangcao ID="Quangcao2" runat="server" />
+                    <uc:Thamdo ID="Thamdo2" runat="server" />
                 </div>
             </div>
 

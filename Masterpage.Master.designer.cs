@@ -114,6 +114,15 @@ namespace SieuThiSach
         protected global::SieuThiSach.UserControls.Quangcao Quangcao2;
 
         /// <summary>
+        /// Thamdo2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::SieuThiSach.UserControls.Thamdo Thamdo2;
+
+        /// <summary>
         /// Footer1 control.
         /// </summary>
         /// <remarks>

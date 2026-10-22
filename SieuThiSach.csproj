@@ -113,6 +113,7 @@
     <Content Include="Sachtheochude.aspx" />
     <Content Include="Sachtheonhaxuatban.aspx" />
     <Content Include="Styles\site.css" />
+    <Content Include="Taikhoan.aspx" />
     <Content Include="UserControls\Chudesach.ascx" />
     <Content Include="UserControls\Footer.ascx" />
     <Content Include="UserControls\Giohang.ascx" />
@@ -123,6 +124,7 @@
     <Content Include="UserControls\Quangcao1.ascx" />
     <Content Include="UserControls\Sachbannhieu.ascx" />
     <Content Include="UserControls\Sachmoi.ascx" />
+    <Content Include="UserControls\Thamdo.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +212,13 @@
     <Compile Include="Sachtheonhaxuatban.aspx.designer.cs">
       <DependentUpon>Sachtheonhaxuatban.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Taikhoan.aspx.cs">
+      <DependentUpon>Taikhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Taikhoan.aspx.designer.cs">
+      <DependentUpon>Taikhoan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Chudesach.ascx.cs">
       <DependentUpon>Chudesach.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +291,13 @@
     </Compile>
     <Compile Include="UserControls\Sachmoi.ascx.designer.cs">
       <DependentUpon>Sachmoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Thamdo.ascx.cs">
+      <DependentUpon>Thamdo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Thamdo.ascx.designer.cs">
+      <DependentUpon>Thamdo.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
